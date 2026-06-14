@@ -1,0 +1,58 @@
+/* Max Jankowski */
+/* Bellevue University */
+/* CSD430 Module 2 */
+
+/* External CSS stylesheet The Chase book page for CSD-430 */
+
+/* body to set the over all font for the page */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333333;
+}
+
+h2 {
+    color: #555555;
+}
+
+p {
+    color: #444444;
+}
+
+/* borders in between cells are collapsed into a single border
+	also setting width for the table */
+table {
+    border-collapse: collapse;
+    width: 80%;
+    background-color: #ffffff;
+}
+
+/* header for the table */
+th {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 20px;
+    text-align: left;
+}
+/* data for the table */
+
+td {
+    border: 1px solid #cccccc;
+    padding: 10px;
+    color: #333333;
+}
+
+/*increasing the padding and adding a light border 
+	around each of the cells */
+tr:nth-child(even) {
+    background-color: #eeeeee;
+}
+img {
+    display: block;
+    margin-bottom: 20px;
+}
