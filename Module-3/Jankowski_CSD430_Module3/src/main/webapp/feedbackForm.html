@@ -1,0 +1,94 @@
+<!-- Max Jankowski 
+	 Bellevue University 
+	 CSD 430 Module 3 input html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Genre Fiction Reader Feedback Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!--
+    going with just html for this file as the page has no 
+    dynamic content and is just markup. this includes dropdowns, txt input and 
+    check box. None of these change based on he input provided, so their is no need 
+    to make this a JSP. The philosophy here is do only what is nessesary. 
+    this page is made to submit to feedbacksesults which is a JSP file.
+    The concept here is that an online publisher is conducting a survey on what their customers 
+    like or dislike about the selection, as well as capture their client preferred format 
+
+-->
+
+<h1>Genre Fiction Reader Feedback Form</h1>
+<p class="intro">We're collecting feedback from genre fiction readers to better
+    understand reading habits and satisfaction with available titles.
+    Please fill out the short survey below.</p>
+
+<form action="feedbackResults.jsp" method="post">
+
+    <!-- data point 1 is a simple text field for entering name -->
+    <fieldset>
+        <legend>Reader Name</legend>
+        <label for="readerName">Enter your name:</label>
+        <input type="text" id="readerName" name="readerName" required>
+    </fieldset>
+
+    <!-- Data point 2 is drop down selection for age range -->
+    <fieldset>
+        <legend>Age Range</legend>
+        <label for="ageRange">Select your age range:</label>
+        <select id="ageRange" name="ageRange" required>
+            <option value="">-- Select One --</option>
+            <option value="Under 18">Under 18</option>
+            <option value="18-24">18-24</option>
+            <option value="25-34">25-34</option>
+            <option value="35-44">35-44</option>
+            <option value="45-54">45-54</option>
+            <option value="55+">55+</option>
+        </select>
+    </fieldset>
+
+    <!-- data point on perform form of fiction delivery  -->
+    <fieldset>
+        <legend>Preferred Reading Format</legend>
+        <label class="inline-option"><input type="radio" name="preferredFormat" value="Physical Book" required> Physical Book</label>
+        <label class="inline-option"><input type="radio" name="preferredFormat" value="E-book"> E-book</label>
+        <label class="inline-option"><input type="radio" name="preferredFormat" value="Audiobook"> Audiobook</label>
+    </fieldset>
+
+    <!-- Data point 4 is a  multi-choice check box selection of a genre fiction selection  -->
+    <fieldset>
+        <legend>Favorite Genres (select all that apply)</legend>
+        <label class="inline-option"><input type="checkbox" name="genres" value="Fantasy"> Fantasy</label>
+        <label class="inline-option"><input type="checkbox" name="genres" value="Science Fiction"> Science Fiction</label>
+        <label class="inline-option"><input type="checkbox" name="genres" value="Mystery/Thriller"> Mystery/Thriller</label>
+        <label class="inline-option"><input type="checkbox" name="genres" value="Romance"> Romance</label>
+        <label class="inline-option"><input type="checkbox" name="genres" value="Horror"> Horror</label>
+        <label class="inline-option"><input type="checkbox" name="genres" value="Historical Fiction"> Historical Fiction</label>
+    </fieldset>
+
+    <!-- data point 5 is a single-choice selection for scale of satisfaction  -->
+    <fieldset>
+        <legend>Satisfaction with Genre Selection</legend>
+        <label class="inline-option"><input type="radio" name="satisfaction" value="1 - Very Dissatisfied" required> 1 - Very Dissatisfied</label>
+        <label class="inline-option"><input type="radio" name="satisfaction" value="2 - Dissatisfied"> 2 - Dissatisfied</label>
+        <label class="inline-option"><input type="radio" name="satisfaction" value="3 - Neutral"> 3 - Neutral</label>
+        <label class="inline-option"><input type="radio" name="satisfaction" value="4 - Satisfied"> 4 - Satisfied</label>
+        <label class="inline-option"><input type="radio" name="satisfaction" value="5 - Very Satisfied"> 5 - Very Satisfied</label>
+    </fieldset>
+
+    <!-- 6th data point is a multi-line text area -->
+    <fieldset>
+        <legend>Additional Comments</legend>
+        <label for="comments">Anything else you'd like to share about your reading experience?</label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
+    </fieldset>
+
+    <button type="submit">Submit Feedback</button>
+</form>
+
+</body>
+</html>
