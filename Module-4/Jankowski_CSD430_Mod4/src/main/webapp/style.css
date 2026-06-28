@@ -1,0 +1,182 @@
+/* 
+Max Jankowski 
+Bellevue University 
+CSD-430 Mod 4 stylesheet 
+
+
+
+
+/*General body text format, will have slightly light blue for outline background and a gold to contrast  */
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background-color: #1a1a2e;
+    color: #e0d9c8;
+    margin: 0;
+    padding: 30px 40px;
+}
+
+/* formating the header, went with the gold c9a84c to try to match cover author text outline, planing on using throughout   */
+.page-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.page-header h1 {
+    font-size: 2.2em;
+    color: #c9a84c;
+    margin-bottom: 4px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.page-header h2 {
+    font-size: 1.1em;
+    color: #a89060;
+    font-weight: normal;
+    font-style: italic;
+    margin: 0 0 8px 0;
+}
+
+.page-header .author-line {
+    font-size: 0.85em;
+    color: #7a6e5a;
+}
+
+/* setting the basic test format and color to be used for most of this page. correction I did experiment a bit  */
+.dataset-description {
+    background-color: #16213e;
+    border-left: 4px solid #c9a84c;
+    padding: 14px 20px;
+    margin: 20px 0 24px 0;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #c8bfa8;
+}
+
+.dataset-description strong {
+    color: #c9a84c;
+}
+
+/* Simple styling for field description, it has no rid but https://www.html-css-templates.com/html-tutorials/how-to-style-html-tables-using-css was used as well as w3 for basic 
+text formating  */
+.field-legend {
+    background-color: #16213e;
+    border: 1px solid #2e2e4e;
+    border-radius: 6px;
+    padding: 14px 20px;
+    margin-bottom: 24px;
+}
+
+.field-legend h3 {
+    color: #c9a84c;
+    margin: 0 0 10px 0;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.field-legend table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88em;
+}
+
+.field-legend td {
+    padding: 5px 12px 5px 0;
+    vertical-align: top;
+    color: #c8bfa8;
+    border: none;
+}
+
+.field-legend td:first-child {
+    color: #c9a84c;
+    font-weight: bold;
+    white-space: nowrap;
+    width: 160px;
+} 
+
+/* styling the main table some ideas came from: https://www.html-css-templates.com/html-tutorials/how-to-style-html-tables-using-css
+Nothing was purposely copied and some code from mod 2 was used   */
+.data-table-wrapper {
+    overflow-x: auto;
+}
+
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92em;
+}
+
+table.data-table thead tr {
+    background-color: #c9a84c;
+    color: #1a1a2e;
+}
+
+table.data-table thead th {
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 0.85em;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border: 1px solid #a8883c;
+}
+
+table.data-table tbody tr {
+    border-bottom: 1px solid #2e2e4e;
+}
+
+table.data-table tbody tr:nth-child(even) {
+    background-color: #16213e;
+}
+
+table.data-table tbody tr:hover {
+    background-color: #1f2d50;
+}
+
+table.data-table td {
+    padding: 10px 14px;
+    vertical-align: top;
+    border: 1px solid #2a2a42;
+    line-height: 1.45;
+}
+
+table.data-table td.name-cell {
+    color: #c9a84c;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+table.data-table td.desc-cell {
+    color: #b0a898;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+/* ── positioning the book cover at the bottom of the page  */
+.book-cover-wrapper {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.book-cover-wrapper img {
+    display: block;
+    margin: 0 auto;
+    height: 360px;
+    width: auto;
+    border-radius: 4px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+/* generating a light fade in from the page content so the transition isn't stark */
+.book-cover-wrapper::before {
+    content: '';
+    display: flex;
+    height: 40px;
+    background: linear-gradient(to bottom, #1a1a2e, transparent);
+    margin-bottom: -40px;
+    position: relative;
+    z-index: 1;
+}
+
