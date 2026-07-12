@@ -12,9 +12,6 @@ public class CharacterBean implements Serializable {
 	// required to make sure the version is compataible during object deserialization 
     private static final long serialVersionUID = 1L;
 
-    // ---------------------------------------------------------------
-    // Fields — minimum five required; six defined here for richer data
-    // ---------------------------------------------------------------
 
     // defining 6 fields, added nationality as the setting gets wider in later novels 
     private String characterName;
