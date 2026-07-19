@@ -87,7 +87,7 @@ Added new file updateRecord.jsp to handle the steps of the update the GET reques
        the update, including each field's data type as a column
        description.</p>
 
-    <table>
+    <table> <!-- Formatting table -->
         <thead>
             <tr>
                 <th>Movie ID (int)</th>
